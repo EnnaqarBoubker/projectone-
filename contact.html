@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- root element font-size = 16px -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: beige;
+            height: 100px;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .header-one {
+            width: 90%;
+            line-height: 90px;
+            margin: 0 auto;
+        }
+
+        .part-logo {
+            color: red;
+
+        }
+
+        .logo {
+            float: left;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            border: 2px solid #f5f5dc;
+            border-top-left-radius: 12px;
+        }
+
+
+
+
+        .kech {
+            width: 70%;
+            margin: 0 auto;
+
+        }
+
+        .rabat {
+            height: 229px;
+            background: radial-gradient(#ff0000ab, #1b6873b5);
+            padding: 40px;
+        }
+
+        .casa-img {
+            float: right;
+        }
+
+        .casa {
+            width: 50%;
+            float: left;
+        }
+
+        .casa p {
+            margin: 15px 0;
+        }
+
+        .casa p::first-letter {
+            font-size: 3rem;
+
+        }
+
+        button {
+            padding: 5px 30px;
+            border: 2px solid #ffaa00;
+            /* border-radius: 30px; */
+            border-top-left-radius: 10px;
+        }
+
+        button:hover {
+            border-top-right-radius: 10px;
+            border-top-left-radius: 0px;
+            background: conic-gradient(red, green, yellow);
+        }
+
+        button a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .miknas {
+            text-align: center;
+            background: #00daff;
+            padding: 60px 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 30px;
+            text-align: start;
+            width: 30%;
+            margin: 30px auto 0;
+        }
+
+        input,
+        textarea {
+            width: 30%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- this is header -->
+    <header>
+        <div class="header-one">
+            <h2 class="logo">Gomy<span class="part-logo">Code</span> </h2>
+            <nav>
+                <ul class="lista">
+                    <li><a href="">home</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- this is main -->
+    <main>
+        <div class="kech">
+            <div class="rabat">
+                <div class="casa">
+                    <h1>Gomy Code</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, ad ultricies quisque dictumst senectus
+                        pulvinar
+                        platea quis, est nulla torquent nec ridiculus enim. In fringilla porttitor id leo sodales tempor
+                        per
+                        montes penatibus, velit tortor aliquam scelerisque netus habitasse conubia etiam...
+                    </p>
+                    <button><a href="https://www.w3schools.com/cssref/pr_class_float.php" target="_blank">Plus
+                            Info</a></button>
+                </div>
+                <div class="casa-img">
+                    <img src="/img/logo/images.png" alt="GomyCode">
+                </div>
+            </div>
+
+            <div class="miknas">
+                <h1>Contactez-nous</h1>
+
+                <form class="contact">
+                    <div class="">
+                        <label>first name</label>
+                        <input class="marrakech" type="text" placeholder="Enter your first name">
+                    </div>
+                    <div class="">
+                        <label>last name</label>
+                        <input type="text" placeholder="Enter your last name">
+                    </div>
+                    <div class="">
+                        <label>phone number</label>
+                        <input type="number" placeholder="Enter your phone number">
+                    </div>
+                    <div class="">
+                        <label>birthday</label>
+                        <input type="date" placeholder="Enter your birthday">
+                    </div>
+                    <div class="">
+                        <label>message</label>
+                        <textarea placeholder="Enter your message here"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- this is footer -->
+    <footer>
+        <p>@copyrigth 2024</p>
+    </footer>
+</body>
+
+</html>
