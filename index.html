@@ -1,108 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            overflow: hidden;
-            background-color: #f9f9f9;
-            padding: 10px;
-        }
-
-        .container-fluid {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .logo {
-            float: left;
-            width: 100px;
-        }
-
-        .logo img {
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-        }
-
-        nav {
-            float: right;
-            margin-top: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul>li {
-            float: left;
-            margin-left: 20px;
-            position: relative;
-            text-transform: capitalize;
-        }
-
-        nav ul>li>ul {
-            display: none;
-            position: absolute;
-            top: 20px;
-            left: 0;
-            background-color: #fff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul>li:hover>ul {
-            display: block;
-        }
-
-        nav ul li {
-            padding: 10px;
-        }
-
-        nav ul li ul li {
-            padding: 10px;
-            width: 150px;
-            white-space: nowrap;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
+    
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <div class="container-fluid">
-                <div class="logo">
-                    <img src="/img/logo/images.png" alt="Logo">
-                </div>
-                <nav>
-                    <ul>
-                        <li>home</li>
-                        <li>about us</li>
-                        <li>
-                            sports
-                            <ul>
-                                <li>basket ball</li>
-                                <li>hand ball</li>
-                                <li>foot ball</li>
-                            </ul>
-                        </li>
-                        <li>contact</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-</body>
+  <label for="search-input">Search or enter text:</label>
+  <input type="text" id="search-input" placeholder="Search or enter text..." list="suggestions-list">
+  <datalist id="suggestions-list"></datalist>
 
+  <script>
+      const suggestions = ["Option 1", "fjeo$", "uhfbvj 3", "piri 4", "Another Option", "More Options", "Some Option", "Different Option"];
+      const searchInput = document.getElementById('search-input');
+      const suggestionsList = document.getElementById('suggestions-list');
+
+      searchInput.addEventListener('input', () => {
+          const inputValue = searchInput.value.toLowerCase();
+          suggestionsList.innerHTML = '';
+
+          if (inputValue) {
+              const filteredSuggestions = suggestions.filter(option =>
+                  option.toLowerCase().includes(inputValue)
+              ).slice(0, 4); // Limit to 4 suggestions
+
+              filteredSuggestions.forEach(option => {
+                  const optionElement = document.createElement('option');
+                  optionElement.value = option;
+                  suggestionsList.appendChild(optionElement);
+              });
+          }
+      });
+  </script>
+
+</body>
 </html>

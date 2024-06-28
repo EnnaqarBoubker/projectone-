@@ -45,6 +45,8 @@
 
         nav ul li {
             float: left;
+            position: relative;
+            display: inline-block;
         }
 
         nav ul li a {
@@ -133,8 +135,29 @@
         textarea {
             width: 30%;
         }
+
+        ul li ul.dropdown {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+
+        ul li ul.dropdown li {
+            display: block;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
     </style>
 
+    <script src="/js/main.js"></script>
+
+    
 </head>
 
 <body>
@@ -145,7 +168,14 @@
             <nav>
                 <ul class="lista">
                     <li><a href="">home</a></li>
-                    <li><a href="">services</a></li>
+                    <li>
+                        <a href="">services</a>
+                        <ul class="dropdown">
+                            <li><a href="">Servise 1</a></li>
+                            <li><a href="">Servise 2</a></li>
+                            <li><a href="">Servise 3</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">contact</a></li>
                 </ul>
             </nav>
